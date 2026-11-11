@@ -38,7 +38,7 @@ export function ProjectPanel({ project }: { project: Project }) {
         className="ghost-button mb-4 inline-flex min-h-10 items-center gap-2 rounded-[3px] border border-ink/20 bg-parchment/35 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-ink-muted hover:bg-parchment-aged/50 hover:text-ink"
       >
         <ArrowLeft aria-hidden="true" className="h-4 w-4" />
-        Back to the treasure maps
+        Kembali ke Peta Petualangan
       </button>
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
@@ -52,11 +52,11 @@ export function ProjectPanel({ project }: { project: Project }) {
 
           <dl className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 border-y border-ink/12 py-4 text-sm">
             <div>
-              <dt className="text-[10px] uppercase tracking-[0.14em] text-ink-muted">Role</dt>
+              <dt className="text-[10px] uppercase tracking-[0.14em] text-ink-muted">Peran</dt>
               <dd className="mt-0.5 font-medium text-ink">{project.role}</dd>
             </div>
             <div>
-              <dt className="text-[10px] uppercase tracking-[0.14em] text-ink-muted">Timeline</dt>
+              <dt className="text-[10px] uppercase tracking-[0.14em] text-ink-muted">Periode</dt>
               <dd className="mt-0.5 font-medium text-ink">{project.timeline}</dd>
             </div>
             <div>
@@ -72,7 +72,7 @@ export function ProjectPanel({ project }: { project: Project }) {
           <div className="mt-4 flex flex-wrap gap-2">
             {project.links.live ? (
               <ActionLink href={project.links.live} external icon={ExternalLink}>
-                Live demo
+                Lihat Demo
               </ActionLink>
             ) : null}
             {project.links.github ? (
@@ -82,7 +82,7 @@ export function ProjectPanel({ project }: { project: Project }) {
             ) : null}
             {project.links.video ? (
               <ActionLink href={project.links.video} external icon={Play} variant="outline">
-                Walkthrough
+                Video Demo
               </ActionLink>
             ) : null}
           </div>
@@ -101,7 +101,7 @@ export function ProjectPanel({ project }: { project: Project }) {
 
       <section className="mt-8" aria-labelledby="project-story">
         <PaperHeading id="project-story" icon={Sparkles}>
-          The voyage
+          Cerita di Balik Proyek
         </PaperHeading>
         <div className="mt-2 space-y-3 text-[15px] leading-relaxed text-ink sm:text-base">
           {project.description.map((paragraph) => (
@@ -114,7 +114,7 @@ export function ProjectPanel({ project }: { project: Project }) {
 
       <section aria-labelledby="project-gallery">
         <PaperHeading id="project-gallery" icon={Layers3}>
-          Field notes
+          Galeri Proyek
         </PaperHeading>
         <ul className="mt-3 grid gap-3 sm:grid-cols-3">
           {project.gallery.map((image, index) => (
@@ -142,7 +142,7 @@ export function ProjectPanel({ project }: { project: Project }) {
       <div className="grid gap-7 lg:grid-cols-2">
         <section aria-labelledby="project-tech">
           <PaperHeading id="project-tech" icon={Wrench}>
-            Build & architecture
+            Teknologi & Arsitektur
           </PaperHeading>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {project.technologies.map((technology) => (
@@ -166,7 +166,7 @@ export function ProjectPanel({ project }: { project: Project }) {
 
         <section aria-labelledby="project-storms">
           <PaperHeading id="project-storms" icon={TriangleAlert}>
-            Storms & solutions
+            Tantangan & Solusi
           </PaperHeading>
           <div className="mt-3 space-y-3">
             {project.challenges.map((challenge) => (
@@ -191,7 +191,7 @@ export function ProjectPanel({ project }: { project: Project }) {
       <div className="grid gap-7 lg:grid-cols-2">
         <section aria-labelledby="project-features">
           <PaperHeading id="project-features" icon={Check}>
-            What shipped
+            Fitur Utama
           </PaperHeading>
           <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
             {project.features.map((feature) => (
@@ -209,7 +209,7 @@ export function ProjectPanel({ project }: { project: Project }) {
 
         <section aria-labelledby="project-responsibilities">
           <PaperHeading id="project-responsibilities" icon={Layers3}>
-            My watch
+            Tanggung Jawab Saya
           </PaperHeading>
           <ul className="mt-3 space-y-2">
             {project.responsibilities.map((responsibility) => (
@@ -238,7 +238,7 @@ export function ProjectPanel({ project }: { project: Project }) {
           className="ghost-button inline-flex min-h-11 items-center gap-2 self-start rounded-[3px] border border-ink/25 bg-parchment/40 px-4 py-2 text-sm font-semibold text-ink hover:bg-parchment-aged/60"
         >
           <ArrowLeft aria-hidden="true" className="h-4 w-4" />
-          Unfold another map
+          	Lihat Proyek Lain
         </button>
       </div>
     </div>

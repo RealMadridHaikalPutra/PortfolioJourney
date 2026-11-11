@@ -28,30 +28,32 @@ async function PortfolioExperience() {
   return (
     <>
       <h1 className="sr-only">
-        {profile.name} — {profile.role} · Island Journey interactive portfolio
+        {profile.name} — {profile.role} | Portfolio Interaktif
       </h1>
       <GameStage content={content} />
 
       <noscript>
         <div className="paper absolute inset-0 z-[100] overflow-y-auto p-6 text-ink">
           <div className="mx-auto max-w-2xl">
-            <p className="font-hand text-2xl text-ember">A note from the harbourmaster</p>
+            <p className="font-hand text-2xl text-ember">Catatan untuk Pengunjung</p>
             <h2 className="mt-1 font-display text-4xl">
-              This portfolio is a little sailing game.
+              Portfolio ini dibuat dalam bentuk petualangan interaktif.
             </h2>
             <p className="mt-3 text-lg">
-              JavaScript is switched off, so the boat is still tied to the dock. Here is the
-              logbook in plain text instead.
+              JavaScript sedang dinonaktifkan sehingga pengalaman interaktif tidak dapat dijalankan.
+Berikut adalah versi sederhana dari portfolio saya yang tetap dapat Anda baca.
             </p>
             <p className="mt-3 text-lg">
-              {profile.intro} Based in {profile.location}. Reach me at{" "}
+              {profile.intro}
+Saat ini saya berdomisili di {profile.location}.
+Silakan hubungi saya melalui{" "}
               <a className="underline decoration-brass underline-offset-4" href={`mailto:${profile.email}`}>
                 {profile.email}
               </a>
               .
             </p>
 
-            <h3 className="mt-8 font-display text-2xl">Sections</h3>
+            <h3 className="mt-8 font-display text-2xl">Daftar Halaman</h3>
             <ul className="mt-2 list-disc space-y-1 pl-6">
               <li>Home — lighthouse: introduction and résumé.</li>
               <li>About — cottage: story, education, achievements, timeline.</li>
@@ -61,7 +63,7 @@ async function PortfolioExperience() {
               <li>Contact — harbour: email, socials, and CV.</li>
             </ul>
 
-            <h3 className="mt-8 font-display text-2xl">Elsewhere</h3>
+            <h3 className="mt-8 font-display text-2xl">Temukan Saya</h3>
             <ul className="mt-2 space-y-1">
               {profile.socials.map((social) => (
                 <li key={social.href}>
@@ -72,7 +74,7 @@ async function PortfolioExperience() {
               ))}
               <li>
                 <a className="underline decoration-brass underline-offset-4" href="/resume.pdf">
-                  Download résumé (PDF)
+                  Download Resume (PDF)
                 </a>
               </li>
             </ul>

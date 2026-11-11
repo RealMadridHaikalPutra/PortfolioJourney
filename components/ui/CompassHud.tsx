@@ -45,7 +45,7 @@ export function CompassHud({ className = "" }: { className?: string }) {
         <span className="mx-1.5 text-foam/40">·</span>
         <span ref={speedRef}>0 kn</span>
       </p>
-      <span className="sr-only">Compass and current speed</span>
+      <span className="sr-only">Kompas dan Kecepatan Saat Ini</span>
     </div>
   );
 }

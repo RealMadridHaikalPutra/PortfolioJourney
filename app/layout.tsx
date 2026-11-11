@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Island Journey — a hand-painted sailing portfolio for Alex Rivers",
+        alt: "Island Journey — a hand-painted sailing portfolio for Real Madrid Haikal Putra",
       },
     ],
   },

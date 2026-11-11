@@ -87,7 +87,8 @@ ships a service-role key to the browser.
 - **Island index:** the **Chart** button in the top right opens every section as
   an accessible list. This is the keyboard and screen-reader path through the
   whole portfolio.
-- **Sound:** starts on the first gesture; toggle it any time in the HUD.
+- **Sound:** music attempts to start when the page opens; browser autoplay
+  policies may require the first interaction. Toggle it any time in the HUD.
 
 ## Architecture
 
@@ -103,14 +104,14 @@ game/entities/            boat physics and rendering
 game/world/               ocean, islands, landmarks, ambient wildlife
 game/fx/                  pooled wake and ripples
 game/textures/            procedural canvas textures (no downloads)
-game/audio/               Howler.js + synthesised soundscape
+game/audio/               Howler.js + sound effects
 game/data/                island layout and palettes
 lib/content/              types + bundled fallback profile, skills, projects
 lib/content/server.ts     cached Supabase loader (falls back when unset)
 supabase/                 schema.sql, seed.sql, public-read RLS policies
 store/                    Zustand UI state (modal, visited, sound, chart)
 hooks/                    reduced motion, coarse pointer, focus trap
-public/                   portrait, OG image, résumé PDF
+public/                   portrait, OG image, résumé PDF, audio/instrument.mp3
 scripts/                  brand assets and Supabase seed generation
 ```
 
@@ -167,3 +168,7 @@ own assets, or edit `scripts/generate-assets.mjs` and run `npm run assets`.
 
 Set `NEXT_PUBLIC_SITE_URL` to the real domain before deploying so canonical
 links, Open Graph URLs, and the sitemap resolve correctly.
+
+Place your background music at `public/audio/instrument.mp3`. It starts when
+the page opens where autoplay is allowed, and loops until muted with the sound
+toggle. Browsers that block autoplay start it after the first interaction.

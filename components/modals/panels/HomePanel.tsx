@@ -38,7 +38,7 @@ export function HomePanel() {
               </div>
             </div>
             <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full border border-ink/20 bg-parchment px-3 py-1 font-hand text-lg leading-none text-ember shadow-sm">
-              your skipper
+              Sang Nahkoda
             </span>
           </div>
 
@@ -55,10 +55,10 @@ export function HomePanel() {
         </div>
 
         <div>
-          <Kicker>Hello, traveller</Kicker>
+          <Kicker>Selamat Datang, Pelaut</Kicker>
           <h3 className="mt-1 font-display text-3xl leading-[1.05] text-ink sm:text-[2.6rem]">
-            I&apos;m {profile.name}.
-            <span className="block text-ink-muted">I build small worlds.</span>
+             Saya {profile.name}.
+            <span className="block text-xl text-ink-muted">Mari jelajahi perjalanan saya sebagai Full Stack Developer.</span>
           </h3>
           <p className="mt-4 text-[15px] leading-relaxed text-ink sm:text-base">
             {profile.intro}
@@ -72,7 +72,7 @@ export function HomePanel() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <ActionLink href="/resume.pdf" download icon={Download}>
-              Download résumé
+              Download Resume
             </ActionLink>
             <button
               type="button"
@@ -80,7 +80,7 @@ export function HomePanel() {
               className="ghost-button inline-flex min-h-11 items-center gap-2 rounded-[3px] border border-ink/30 bg-parchment/50 px-4 py-2 text-sm font-semibold text-ink hover:border-ink/50 hover:bg-parchment-aged/70"
             >
               <Anchor aria-hidden="true" className="h-4 w-4 text-brass" />
-              Back to the boat
+              Kembali ke Perahu
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </button>
           </div>
@@ -93,11 +93,10 @@ export function HomePanel() {
 
           <div className="mt-5">
             <PaperHeading icon={Sparkles} className="text-lg sm:text-xl">
-              Chart a course
+              Mulai Petualangan
             </PaperHeading>
             <p className="mt-2 text-sm leading-relaxed text-ink-muted">
-              Six islands, one logbook each. The lighthouse is home; the treasure cave
-              holds the work. Sail close and the map opens itself.
+              Enam pulau. Satu perahu kecil. Jelajahi cerita saya sebagai Full Stack Developer melalui pengalaman, proyek, dan teknologi.
             </p>
           </div>
         </div>
@@ -116,11 +115,10 @@ function PopoverNote() {
   return (
     <div className="mt-5 flex flex-col gap-2">
       <PaperNote>
-        &ldquo;{profile.tagline}&rdquo; That is the whole job description, really.
+        &ldquo;{profile.tagline}&rdquo; Itulah prinsip yang selalu saya pegang dalam setiap proyek.
       </PaperNote>
       <p className="text-xs leading-relaxed text-ink-muted">
-        Tip: every island is a section of this portfolio. If you would rather read
-        than sail, open the chart from the top-right of the screen.
+        Tips: Setiap pulau mewakili bagian berbeda dari portfolio ini. Jelajahi semuanya, atau gunakan Peta Pulau untuk berpindah lebih cepat.
       </p>
     </div>
   );

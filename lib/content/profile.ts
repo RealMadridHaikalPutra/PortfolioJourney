@@ -51,129 +51,147 @@ export interface Profile {
 }
 
 export const profile: Profile = {
-  name: "Alex Rivers",
-  firstName: "Alex",
-  role: "Creative Frontend Engineer",
-  location: "Lisbon, Portugal",
-  timezone: "WEST · UTC+1",
-  email: "hello@alexrivers.dev",
-  availability: "Open to select product work",
-  tagline: "I build small worlds that make software feel like play.",
+  name: "Real Madrid Haikal Putra",
+  firstName: "Real Madrid",
+
+  role: "Software Engineer",
+
+  location: "Jakarta, Indonesia",
+  timezone: "WIB · UTC+7",
+
+  email: "realmadrid300504@gmail.com",
+
+  availability:
+    "Terbuka untuk peluang Remote, Freelance, Magang, maupun Full-time.",
+
+  tagline:
+    "Mengubah proses bisnis yang kompleks menjadi solusi perangkat lunak yang efisien, terintegrasi, dan mudah dikembangkan.",
+
   intro:
-    "Eight years of shipping fast, accessible interfaces — from realtime trading desks to browser photobooths. I care about the millisecond between intent and response, and the thousand small details that make a product feel alive.",
+    "Saya adalah Software Engineer yang memiliki pengalaman dalam membangun aplikasi web modern, sistem backend berskala besar, integrasi API, workflow automation, serta perancangan arsitektur sistem. Saya menikmati proses mengembangkan sebuah produk secara end-to-end, mulai dari analisis kebutuhan, perancangan sistem, pengembangan frontend dan backend, hingga deployment dan optimasi performa aplikasi.",
+
   longStory: [
-    "I grew up on the Atlantic coast, taking apart radios and drawing maps of places that did not exist yet. That combination never really left me: today I build interfaces that behave like little worlds, with clear rules and room to wander.",
-    "My work sits where product engineering meets craft. I lead frontend architecture for teams that care about performance budgets as much as motion curves, and I still write the shaders, the state machines, and the tests myself.",
-    "When I am not shipping, I am sailing a very slow 1979 sloop, restoring mechanical keyboards, or teaching a small weekly class on creative coding in Lisbon.",
+    "Perjalanan saya dimulai dari rasa penasaran tentang bagaimana sebuah website dan sistem bekerja di balik layar. Sejak saat itu saya terus belajar mengembangkan perangkat lunak, bukan hanya dari sisi frontend, tetapi juga backend, database, API, workflow automation, hingga perancangan arsitektur sistem yang dapat menangani kebutuhan bisnis yang terus berkembang.",
+
+    "Selama lebih dari tiga tahun mengembangkan berbagai proyek, saya telah membangun beragam solusi seperti Inventory Management System, Human Resource Management System, Travel Management System, aplikasi kasir, sistem sinkronisasi stok multi-marketplace, hingga berbagai aplikasi berbasis Artificial Intelligence. Pengalaman tersebut membuat saya terbiasa bekerja mulai dari tahap analisis kebutuhan, perancangan database, implementasi REST API, pengembangan antarmuka pengguna, hingga deployment ke lingkungan produksi.",
+
+    "Saya memiliki ketertarikan besar terhadap backend engineering, distributed system, API integration, workflow automation, dan pengembangan aplikasi enterprise. Bagi saya, perangkat lunak yang baik bukan hanya memiliki tampilan yang menarik, tetapi juga memiliki arsitektur yang kuat, mudah dipelihara, memiliki performa yang baik, dan mampu menyelesaikan permasalahan bisnis secara nyata.",
+
+    "Saat ini saya terus mengembangkan kemampuan di bidang Software Engineering, Artificial Intelligence, Computer Vision, Graph Analytics, serta Workflow Automation. Saya percaya bahwa setiap proyek merupakan kesempatan untuk belajar teknologi baru, meningkatkan kualitas engineering, dan memberikan solusi yang berdampak bagi pengguna."
   ],
+
   stats: [
-    { label: "Years shipping", value: "8" },
-    { label: "Products launched", value: "24" },
-    { label: "Lighthouse score kept", value: "98+" },
-    { label: "Countries sailed", value: "17" },
+    {
+      label: "Pengalaman",
+      value: "3+ Tahun",
+    },
+    {
+      label: "Project",
+      value: "15+",
+    },
+    {
+      label: "Teknologi",
+      value: "30+",
+    },
+    {
+      label: "Hackathon",
+      value: "Top 15",
+    },
   ],
+
   education: [
     {
-      period: "2013 — 2017",
-      title: "BSc Computer Science",
-      place: "University of Porto",
+      period: "2023 — Sekarang",
+      title: "S1 Informatika",
+      place: "Universitas Gunadarma",
       detail:
-        "Human–computer interaction focus. Thesis on spatial interfaces for small screens.",
+        "Mempelajari Software Engineering, Web Development, Database System, System Analysis, Distributed System, Artificial Intelligence, serta pengembangan perangkat lunak modern.",
     },
     {
-      period: "2018",
-      title: "Interaction Design Certificate",
-      place: "Interaction Design Foundation",
+      period: "2026",
+      title: "Penulisan Ilmiah",
+      place: "Universitas Gunadarma",
       detail:
-        "Motion, information design, and accessible interaction patterns for the web.",
+        "Melakukan penelitian mengenai pengembangan sistem sinkronisasi stok multi-marketplace menggunakan Hybrid Synchronization untuk mengurangi overselling pada Shopee dan TikTok Shop.",
     },
   ],
+
   achievements: [
     {
       year: "2025",
-      title: "Awwwards Honorable Mention",
-      detail: "For an interactive climate data story built with WebGL and SVG.",
+      title: "Top 15 Finalist Amartha x GDG Jakarta Hackathon",
+      detail:
+        "Bersama tim mengembangkan SocialCollateral AI, sebuah platform berbasis Artificial Intelligence yang memanfaatkan Graph Analytics, Natural Language Processing, Computer Vision, React, FastAPI, dan Google Cloud untuk membantu proses analisis kredit berbasis Social Trust Score.",
+    }
+  ],
+
+  timeline: [
+    {
+      year: "2022",
+      title: "Memulai Karier sebagai Full Stack Developer",
+      detail:
+        "Bergabung dengan Mirorim Jaya dan mulai mengembangkan berbagai sistem internal perusahaan seperti Inventory Management System, Human Resource Management System, aplikasi absensi, aplikasi kasir, serta workflow berbasis BPMN.",
+    },
+    {
+      year: "2023",
+      title: "Menempuh Pendidikan S1 Informatika",
+      detail:
+        "Melanjutkan pendidikan di Universitas Gunadarma sekaligus terus mengembangkan kemampuan sebagai Software Engineer melalui berbagai proyek nyata.",
     },
     {
       year: "2024",
-      title: "Google Dev Library contributor",
-      detail: "Open-source Next.js patterns for progressive canvas experiences.",
+      title: "Mengembangkan Berbagai Enterprise Application",
+      detail:
+        "Mengembangkan berbagai aplikasi menggunakan React, Next.js, FastAPI, Fastify, Express.js, PostgreSQL, Firebase, Supabase, serta berbagai layanan API pihak ketiga.",
     },
     {
-      year: "2023",
-      title: "Speaker · RenderATL",
-      detail: "\"Games as documentation\" — narrative interfaces for complex products.",
+      year: "2025",
+      title: "Travel Management System",
+      detail:
+        "Mengembangkan sistem manajemen perjalanan berbasis web menggunakan Next.js, PostgreSQL, dan Camunda BPMN untuk mendukung proses bisnis perusahaan.",
     },
     {
-      year: "2021",
-      title: "Internal design-system award",
-      detail: "Shipped a 70-component system adopted by five product teams.",
-    },
-  ],
-  timeline: [
-    {
-      year: "2016",
-      title: "First line of production code",
-      detail: "A tiny booking site for my hometown sailing club.",
-    },
-    {
-      year: "2017",
-      title: "Computer Science degree",
-      detail: "Graduated, packed one bag, moved to Berlin for a six-month contract.",
-    },
-    {
-      year: "2019",
-      title: "First zero-to-one product",
-      detail: "Took a fintech onboarding flow from whiteboard to 40k monthly users.",
-    },
-    {
-      year: "2021",
-      title: "Design systems, properly",
-      detail: "Led the frontend platform group at Driftline.",
-    },
-    {
-      year: "2023",
-      title: "Senior engineer, Northwind",
-      detail: "Now building realtime, data-dense products with a small senior team.",
+      year: "2025",
+      title: "Top 15 Amartha x GDG Jakarta Hackathon",
+      detail:
+        "Bersama tim mengembangkan SocialCollateral AI yang memanfaatkan Artificial Intelligence, Graph Analytics, NLP, dan Computer Vision sebagai solusi analisis sosial untuk pembiayaan kelompok.",
     },
     {
       year: "2026",
-      title: "This little ocean",
-      detail: "A portfolio you can sail. Built as a deliberate exercise in craft.",
+      title: "Penelitian Sistem Sinkronisasi Multi Marketplace",
+      detail:
+        "Mengembangkan middleware sinkronisasi stok menggunakan Apache APISIX, Redis, PostgreSQL, FastAPI, dan workflow automation sebagai bagian dari penelitian akademik.",
+    },
+    {
+      year: "2026",
+      title: "Membangun Portfolio Interaktif",
+      detail:
+        "Mengembangkan website portfolio berbasis game 2D menggunakan Next.js dan PixiJS untuk menghadirkan pengalaman yang lebih menarik dalam memperkenalkan karya dan pengalaman sebagai Software Engineer.",
     },
   ],
+
   facts: [
-    "I read the whole Aubrey–Maturin series twice.",
-    "My first website is still online, and still uses a marquee.",
-    "I can tie six useful knots without looking. Seven if you count the bad one.",
-    "Coffee order: espresso, one sugar, always at the same little kiosk in Alfama.",
-    "I keep a notebook of interface sounds I like — doors, switches, rain on canvas.",
-    "Current obsession: tiny physics simulations that run at 60fps on a phone.",
+    "Berpengalaman membangun aplikasi web secara end-to-end mulai dari analisis kebutuhan hingga deployment.",
+    "Menyukai pengembangan backend menggunakan FastAPI, Fastify, Express.js, serta integrasi REST API.",
+    "Memiliki pengalaman mengembangkan workflow automation menggunakan Camunda BPMN.",
+    "Berpengalaman membangun sistem sinkronisasi data antar platform menggunakan API Gateway dan arsitektur middleware.",
+    "Tertarik pada Distributed System, Artificial Intelligence, Computer Vision, Graph Analytics, dan Workflow Automation.",
+    "Menyukai tantangan dalam merancang arsitektur sistem yang scalable, mudah dipelihara, dan memiliki performa tinggi.",
+    "Percaya bahwa perangkat lunak terbaik adalah perangkat lunak yang mampu menyelesaikan permasalahan bisnis sekaligus memberikan pengalaman pengguna yang baik.",
   ],
+
   socials: [
     {
       label: "GitHub",
-      handle: "github.com/alexrivers",
-      href: "https://github.com/alexrivers",
+      handle: "github.com/RealMadridHaikalPutra",
+      href: "https://github.com/RealMadridHaikalPutra",
       icon: "github",
     },
     {
       label: "LinkedIn",
-      handle: "in/alexrivers",
-      href: "https://www.linkedin.com/in/alexrivers",
+      handle: "linkedin.com/in/real-madrid-haikal-putra",
+      href: "https://www.linkedin.com/in/real-madrid-haikal-putra/",
       icon: "linkedin",
-    },
-    {
-      label: "Dribbble",
-      handle: "dribbble.com/alexrivers",
-      href: "https://dribbble.com/alexrivers",
-      icon: "dribbble",
-    },
-    {
-      label: "X / Twitter",
-      handle: "@alexrivers",
-      href: "https://x.com/alexrivers",
-      icon: "x",
     },
   ],
 };

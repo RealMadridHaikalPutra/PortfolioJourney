@@ -8,7 +8,7 @@ export const islands: IslandDefinition[] = [
   {
     id: "home",
     name: "Home",
-    tagline: "The lighthouse",
+    tagline: "Mercusuar",
     landmark: "lighthouse",
     x: 0,
     y: -640,
@@ -29,7 +29,7 @@ export const islands: IslandDefinition[] = [
   {
     id: "about",
     name: "About",
-    tagline: "The cottage",
+    tagline: "Pondok Penjelajah",
     landmark: "cottage",
     x: 700,
     y: -210,
@@ -50,7 +50,7 @@ export const islands: IslandDefinition[] = [
   {
     id: "skills",
     name: "Skills",
-    tagline: "The library",
+    tagline: "Perpustakaan Kuno",
     landmark: "library",
     x: 650,
     y: 430,
@@ -71,7 +71,7 @@ export const islands: IslandDefinition[] = [
   {
     id: "experience",
     name: "Experience",
-    tagline: "The castle",
+    tagline: "Benteng Veteran",
     landmark: "castle",
     x: -40,
     y: 690,
@@ -92,7 +92,7 @@ export const islands: IslandDefinition[] = [
   {
     id: "portfolio",
     name: "Portfolio",
-    tagline: "The treasure cave",
+    tagline: "Gua Harta Karun",
     landmark: "cave",
     x: -650,
     y: 400,
@@ -113,7 +113,7 @@ export const islands: IslandDefinition[] = [
   {
     id: "contact",
     name: "Contact",
-    tagline: "The harbour",
+    tagline: "Pelabuhan",
     landmark: "harbor",
     x: -720,
     y: -230,

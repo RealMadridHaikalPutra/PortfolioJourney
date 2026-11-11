@@ -7,7 +7,7 @@ insert into public.site_profile (
   long_story, stats, education, achievements, timeline, facts, socials
 ) values (
   'main',
-  'Alex Rivers',
+  'Real Madrid Haikal Putra',
   'Alex',
   'Creative Frontend Engineer',
   'Lisbon, Portugal',

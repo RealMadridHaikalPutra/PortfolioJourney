@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, Compass, X } from "lucide-react";
+import { ArrowUpRight, Check, Compass, X } from "lucide-react";
 import { useContent } from "@/components/content/ContentProvider";
 import { useGameStore } from "@/store/useGameStore";
 import { audioManager } from "@/game/audio/AudioManager";
@@ -16,15 +16,13 @@ export function PortfolioPanel() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="max-w-2xl text-[15px] leading-relaxed text-ink sm:text-base">
-            Five treasure maps, five finished voyages. Lift one to read the full chart:
-            the brief, the architecture, the storms, and what shipped.
+            Setiap proyek adalah sebuah pulau dengan cerita yang berbeda.
+            Di dalamnya terdapat tantangan yang dihadapi, solusi yang dibangun, teknologi yang digunakan, serta pengalaman yang saya peroleh selama proses pengembangannya.
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
-            <Tag>Realtime</Tag>
-            <Tag>Creative tooling</Tag>
-            <Tag>Fintech</Tag>
-            <Tag>Audio ML</Tag>
-            <Tag>Collaboration</Tag>
+            <Tag>FrontEnd</Tag>
+            <Tag>BackEnd</Tag>
+            <Tag>FullStack</Tag>
           </div>
         </div>
         <p className="shrink-0 font-hand text-xl text-ink-muted/80">
@@ -98,12 +96,19 @@ export function PortfolioPanel() {
 
       <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <PaperNote>
-          <X aria-hidden="true" className="mr-2 inline h-4 w-4 text-brass" />
-          Nothing here is a mockup. Every chart links to something that ran in the
-          wild.
+          <Check
+            aria-hidden="true"
+            className="mr-2 inline h-4 w-4 text-brass"
+          />
+          Seluruh proyek di portfolio ini dikembangkan berdasarkan pengalaman nyata,
+          mulai dari kebutuhan akademik, pengalaman kerja, hingga pengembangan produk
+          yang digunakan secara langsung.
         </PaperNote>
-        <p className="shrink-0 font-hand text-xl text-ember">— five of many</p>
+
+        <p className="shrink-0 font-hand text-xl text-ember">
+          — beberapa proyek pilihan
+        </p>
       </div>
-    </div>
+      </div>
   );
 }

@@ -66,15 +66,15 @@ export function ContactPanel() {
   return (
     <div className="pb-8">
       <p className="max-w-2xl text-[15px] leading-relaxed text-ink sm:text-base">
-        The harbour is always open. If you have a product that deserves care, a team
-        that needs a frontend hand, or just a good map recommendation, send a signal.
+        Pelabuhan ini selalu terbuka.
+        Jika Anda memiliki ide, proyek, peluang kerja, atau sekadar ingin berdiskusi tentang teknologi, saya akan dengan senang hati mendengarkan. Mari berlayar bersama untuk membangun sesuatu yang bermanfaat.
       </p>
 
       <div className="mt-6 rounded-[3px] border border-ink/15 bg-parchment/35 p-5 sm:p-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-[11px] uppercase tracking-[0.16em] text-ink-muted">
-              Fastest route
+              Hubungi Saya
             </p>
             <a
               href={`mailto:${profile.email}`}
@@ -97,13 +97,13 @@ export function ContactPanel() {
             <span className="h-1.5 w-1.5 rounded-full bg-moss" aria-hidden="true" />
             {profile.availability}
           </span>
-          <Tag>Replies within 2 working days</Tag>
-          <Tag>Remote or Lisbon</Tag>
+          <Tag>Respon dalam 1-2 hari kerja</Tag>
+          <Tag>Remote or Jakarta</Tag>
         </div>
       </div>
 
       <div className="mt-7">
-        <PaperHeading icon={Mail}>Ways to reach the harbour</PaperHeading>
+        <PaperHeading icon={Mail}>Cara Menghubungi Saya</PaperHeading>
         <ul className="mt-3 grid gap-2 sm:grid-cols-2">
           {rows.map((row) => {
             const Icon = row.icon;
@@ -144,11 +144,11 @@ export function ContactPanel() {
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <PaperNote>
-          P.S. I answer every thoughtful note. Mention the sea and you will get an
-          even faster reply.
+          Terima kasih telah mengunjungi portfolio saya.
+          Semoga perjalanan singkat ini dapat memberikan gambaran mengenai pengalaman, proyek, dan semangat saya dalam membangun perangkat lunak.
         </PaperNote>
         <ActionLink href="/resume.pdf" download icon={Download} className="shrink-0">
-          Download résumé
+          Download Resume
         </ActionLink>
       </div>
     </div>

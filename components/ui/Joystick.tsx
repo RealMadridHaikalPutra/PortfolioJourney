@@ -93,7 +93,7 @@ export function Joystick() {
         </div>
       </div>
       <p aria-hidden="true" className="font-hand text-base leading-none text-foam/70">
-        steer
+        Kemudi
       </p>
     </div>
   );

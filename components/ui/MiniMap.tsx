@@ -185,7 +185,7 @@ export function MiniMap({ className = "" }: { className?: string }) {
         />
       </div>
       <p aria-hidden="true" className="font-hand text-base leading-none text-foam/80">
-        the charted sea
+        Peta Perjalanan
       </p>
     </div>
   );

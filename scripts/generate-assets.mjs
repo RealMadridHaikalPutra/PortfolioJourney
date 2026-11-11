@@ -227,7 +227,7 @@ const ogSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630"
   </g>
 
   <g transform="translate(80 118)">
-    <text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="23" letter-spacing="7" fill="#e8cf9b">ALEX RIVERS</text>
+    <text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="23" letter-spacing="7" fill="#e8cf9b">Real Madrid Haikal Putra</text>
     <text x="0" y="102" font-family="Georgia, 'Times New Roman', serif" font-size="96" letter-spacing="1" fill="url(#ogGold)">ISLAND</text>
     <text x="0" y="196" font-family="Georgia, 'Times New Roman', serif" font-size="96" letter-spacing="1" fill="url(#ogGold)">JOURNEY</text>
     <path d="M4 232 L 486 232" stroke="#d9b876" stroke-width="1.5" opacity="0.5"/>
@@ -310,7 +310,7 @@ const rule = (y, color = "0.72 0.59 0.38", width = 0.7) => {
   ops.push(`${color} RG ${width} w 48 ${y} m 547 ${y} l S`);
 };
 
-text(48, 790, 27, "F1", "0.20 0.14 0.09", "ALEX RIVERS");
+text(48, 790, 27, "F1", "0.20 0.14 0.09", "Real Madrid Haikal Putra");
 text(48, 770, 12, "F2", "0.45 0.31 0.16", "Creative Frontend Engineer  ·  Lisbon, Portugal");
 text(48, 752, 9.5, "F2", "0.30 0.24 0.16", "hello@alexrivers.dev  ·  alexrivers.dev  ·  github.com/alexrivers  ·  linkedin.com/in/alexrivers");
 rule(738);

@@ -34,7 +34,7 @@ export function Hud() {
                 Island Journey
               </p>
               <p className="mt-0.5 font-hand text-sm leading-none text-foam/65 sm:text-base">
-                Alex Rivers · interactive portfolio
+                Real Madrid Haikal Putra | Portfolio Interaktif
               </p>
             </div>
           </div>
@@ -44,8 +44,8 @@ export function Hud() {
               type="button"
               onClick={toggleSound}
               aria-pressed={soundOn}
-              aria-label={soundOn ? "Mute the sea and music" : "Unmute the sea and music"}
-              title={soundOn ? "Sound on" : "Sound off"}
+              aria-label={soundOn ? "Matikan musik dan suara laut" : "Nyalakan musik dan suara laut"}
+              title={soundOn ? "Musik & suasana laut aktif" : "Musik & suasana laut nonaktif"}
               className="ghost-button flex h-11 w-11 items-center justify-center rounded-[3px] border border-[#c9a86a]/35 bg-[#08363e]/90 text-[#f0ddb2] shadow-[0_10px_20px_-12px_rgba(0,0,0,0.8)] hover:bg-[#0c4a52]"
             >
               {soundOn ? (
@@ -67,7 +67,7 @@ export function Hud() {
             >
               <BookOpenText aria-hidden="true" className="h-4 w-4" strokeWidth={1.8} />
               <span className="hidden text-xs font-semibold uppercase tracking-[0.12em] sm:inline">
-                Chart
+                Peta Pulau
               </span>
               <span className="rounded-[2px] border border-[#c9a86a]/25 px-1 py-0.5 font-mono text-[10px] leading-none text-foam/75">
                 {visited.length}/6
@@ -90,7 +90,7 @@ export function Hud() {
           >
             <Anchor aria-hidden="true" className="h-4 w-4 text-[#d8b678]" />
             <span className="text-xs font-semibold uppercase tracking-[0.12em]">
-              Anchorage
+              Menuju
             </span>
             <span className="h-3 w-px bg-[#c9a86a]/35" aria-hidden="true" />
             <span className="font-display text-base leading-none">
@@ -107,7 +107,7 @@ export function Hud() {
         aria-hidden="true"
         className="pointer-events-none fixed inset-x-0 bottom-6 z-10 hidden text-center font-hand text-lg text-foam/55 md:block"
       >
-        WASD or arrow keys to sail
+        WASD atau panah untuk bergerak.
       </p>
     </>
   );

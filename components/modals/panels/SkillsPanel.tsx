@@ -50,10 +50,10 @@ const ICONS: Record<SkillIcon, LucideIcon> = {
 };
 
 function fluency(level: number): string {
-  if (level >= 92) return "Expert";
-  if (level >= 84) return "Advanced";
-  if (level >= 70) return "Proficient";
-  return "Working knowledge";
+if(level>=92) return "Sangat Mahir";
+if(level>=84) return "Mahir";
+if(level>=70) return "Menengah";
+return "Dasar";
 }
 
 export function SkillsPanel() {
@@ -61,15 +61,19 @@ export function SkillsPanel() {
   return (
     <div className="pb-8">
       <p className="max-w-2xl text-[15px] leading-relaxed text-ink sm:text-base">
-        A working toolkit, not a buzzword wall. Each shelf lists what I reach for,
-        how long I have used it, and the honest shape of my fluency.
+        Seluruh teknologi berikut merupakan bagian dari perjalanan saya sebagai
+        Software Engineer. Saya menggunakannya dalam proyek akademik, pengalaman
+        profesional, maupun pengembangan produk pribadi.
       </p>
 
       <div className="mt-3 flex flex-wrap gap-2">
-        <Tag>Strict TypeScript</Tag>
-        <Tag>Accessibility first</Tag>
-        <Tag>Performance budgets</Tag>
-        <Tag>Design engineering</Tag>
+        <Tag>Web Development</Tag>
+        <Tag>Frontend Development</Tag>
+        <Tag>Backend Development</Tag>
+        <Tag>Full Stack Development</Tag>
+        <Tag>Enterprise System</Tag>
+        <Tag>API Integration</Tag>
+        <Tag>Artificial Intelligence</Tag>
       </div>
 
       <div className="mt-7 space-y-8">
@@ -82,7 +86,7 @@ export function SkillsPanel() {
                 <p className="mt-1 text-sm text-ink-muted">{group.blurb}</p>
               </div>
               <span className="font-hand text-lg text-ink-muted/80">
-                {group.skills.length} entries
+                {group.skills.length} Keahlian
               </span>
             </div>
 
@@ -107,7 +111,7 @@ export function SkillsPanel() {
                             {skill.name}
                           </h4>
                           <span className="text-[11px] uppercase tracking-[0.1em] text-ink-muted">
-                            {skill.years} yrs
+                            {skill.years} Tahun
                           </span>
                         </div>
                         <p className="mt-1 text-[13px] leading-snug text-ink-muted">
@@ -117,11 +121,11 @@ export function SkillsPanel() {
                           <div
                             className="h-1.5 flex-1 overflow-hidden rounded-full bg-ink/10"
                             role="progressbar"
-                            aria-label={`${skill.name} proficiency`}
+                            aria-label={`Tingkat kemampuan ${skill.name}`}
                             aria-valuenow={skill.level}
                             aria-valuemin={0}
                             aria-valuemax={100}
-                            aria-valuetext={`${fluency(skill.level)}, ${skill.years} years`}
+                            aria-valuetext={`${fluency(skill.level)}, ${skill.years} Tahun Pengalaman`}
                           >
                             <div
                               className="h-full rounded-full"
@@ -148,9 +152,10 @@ export function SkillsPanel() {
 
       <div className="mt-8">
         <PaperNote>
-          Levels are self-assessed against the work I would happily ship unsupervised.
-          The interesting parts are usually in the project charts.
-        </PaperNote>
+  Tingkat kemampuan di bawah merupakan penilaian berdasarkan pengalaman saya
+  dalam mengembangkan proyek nyata, baik untuk kebutuhan akademik, profesional,
+  maupun pengembangan produk pribadi.
+</PaperNote>
       </div>
     </div>
   );

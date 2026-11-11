@@ -3,6 +3,7 @@ import type { Howl } from "howler";
 export type SfxName = "hover" | "click" | "paper" | "splash" | "bird";
 
 const SAMPLE_RATE = 22050;
+const MUSIC_PATH = "/audio/instrument.mp3";
 
 function encodeWav(samples: Float32Array, sampleRate = SAMPLE_RATE): string {
   const buffer = new ArrayBuffer(44 + samples.length * 2);
@@ -57,45 +58,6 @@ function makeOceanLoop(seconds = 7): Float32Array {
     // Gentle fade at both ends keeps the loop seam soft.
     const edge = Math.min(1, t / 0.65, (seconds - t) / 0.65);
     samples[i] = low2 * swell * edge * 0.72;
-  }
-  return samples;
-}
-
-function makeMusicLoop(seconds = 12): Float32Array {
-  const length = Math.floor(seconds * SAMPLE_RATE);
-  const samples = new Float32Array(length);
-  const chords = [
-    [174.61, 220.0, 261.63],
-    [146.83, 196.0, 246.94],
-    [164.81, 207.65, 261.63],
-    [130.81, 164.81, 196.0],
-  ];
-  const segment = seconds / chords.length;
-  const melody = [0, 2, 1, 2, 3, 2, 1, 0];
-
-  for (let i = 0; i < length; i += 1) {
-    const t = i / SAMPLE_RATE;
-    const chordIndex = Math.min(chords.length - 1, Math.floor(t / segment));
-    const local = t - chordIndex * segment;
-    const attack = Math.min(1, local / 1.1);
-    const release = Math.min(1, (segment - local) / 1.3);
-    const envelope = Math.min(attack, release);
-    const globalEdge = Math.min(1, t / 0.4, (seconds - t) / 0.4);
-
-    let pad = 0;
-    for (let n = 0; n < 3; n += 1) {
-      const freq = chords[chordIndex][n];
-      pad += Math.sin(t * freq * Math.PI * 2) * (0.05 - n * 0.008);
-      pad += Math.sin(t * freq * 2 * Math.PI * 2) * 0.008;
-    }
-
-    const step = Math.floor(t / 1.5);
-    const noteT = t % 1.5;
-    const noteIndex = melody[step % melody.length];
-    const note = chords[chordIndex][noteIndex % 3] * 2;
-    const bell = Math.sin(noteT * note * Math.PI * 2) * Math.exp(-noteT * 3.2) * 0.026;
-
-    samples[i] = (pad * envelope + bell) * globalEdge;
   }
   return samples;
 }
@@ -170,8 +132,8 @@ function makeBird(seconds = 0.7): Float32Array {
 }
 
 /**
- * Procedurally synthesised soundscape — no media downloads, no licensing, and
- * a tiny initial payload. Howler.js is loaded lazily on the first gesture.
+ * Synthesised ocean and UI effects with a user-provided music track.
+ * Howler.js is loaded lazily when the client experience mounts.
  */
 class AudioManager {
   private module: typeof import("howler") | null = null;
@@ -194,8 +156,7 @@ class AudioManager {
 
   async enable(): Promise<void> {
     if (this.enabled) {
-      this.ambient?.play();
-      this.music?.play();
+      this.playBed();
       return;
     }
     if (this.initializing) return this.initializing;
@@ -207,8 +168,7 @@ class AudioManager {
     this.muted = muted;
     this.module?.Howler.mute(muted);
     if (!muted && this.enabled) {
-      this.ambient?.play();
-      this.music?.play();
+      this.playBed();
     }
   }
 
@@ -257,11 +217,19 @@ class AudioManager {
       });
 
       this.music = new Howl({
-        src: [encodeWav(makeMusicLoop())],
-        format: ["wav"],
+        src: [MUSIC_PATH],
+        format: ["mp3"],
         loop: true,
         volume: 0.12,
         preload: true,
+        onloaderror: (_soundId, error) => {
+          console.warn(`[island-journey] music file unavailable at ${MUSIC_PATH}`, error);
+        },
+        onplayerror: () => {
+          this.music?.once("unlock", () => {
+            if (!this.muted && !this.music?.playing()) this.music?.play();
+          });
+        },
       });
 
       const clips: Array<[SfxName, Float32Array, number]> = [
@@ -284,11 +252,10 @@ class AudioManager {
         );
       }
 
-      this.ambient.play();
-      this.music.play();
       this.enabled = true;
       this.setDucked(this.ducked);
       this.module.Howler.mute(this.muted);
+      this.playBed();
 
       this.birdTimer = window.setInterval(() => {
         if (!this.muted && this.enabled && Math.random() > 0.35) {
@@ -299,7 +266,13 @@ class AudioManager {
       // Audio is an enhancement; a blocked AudioContext must never break the sea.
       console.warn("[island-journey] audio unavailable", error);
       this.enabled = false;
+      this.initializing = null;
     }
+  }
+
+  private playBed(): void {
+    if (!this.ambient?.playing()) this.ambient?.play();
+    if (!this.music?.playing()) this.music?.play();
   }
 }
 

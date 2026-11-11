@@ -10,59 +10,92 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
-    company: "Northwind Studio",
-    role: "Senior Frontend Engineer",
-    period: "2023 — Present",
-    location: "Lisbon · Hybrid",
+    company: "Mirorim Jaya",
+    role: "Full Stack Developer",
+    period: "Agustus 2022 — Sekarang",
+    location: "Jakarta, Indonesia",
+
     summary:
-      "Technical lead for a realtime market-intelligence product used by 30k analysts. I own frontend architecture, performance, and the design-system contract with product design.",
+      "Bertanggung jawab mengembangkan berbagai sistem internal perusahaan secara end-to-end, mulai dari analisis kebutuhan, perancangan database, pengembangan frontend dan backend, hingga deployment. Terlibat dalam pembangunan Inventory Management System, Human Resource Management System, aplikasi absensi, workflow automation berbasis BPMN, serta aplikasi mobile untuk mendukung operasional bisnis.",
+
     highlights: [
-      "Cut the main dashboard's interaction latency from 340ms to 48ms by moving derived state into a worker and virtualising the tape.",
-      "Designed the streaming data layer that keeps 60 charts in sync without a single rerender storm.",
-      "Mentor three engineers; run a fortnightly craft review with live profiling.",
+      "Mengembangkan Inventory Management System untuk membantu pengelolaan stok dan proses operasional perusahaan.",
+      "Membangun Human Resource Management System dan aplikasi absensi berbasis web.",
+      "Mengembangkan aplikasi kasir dan Shop Management System (Artaka) untuk mendukung operasional penjualan.",
+      "Merancang REST API, struktur database, autentikasi, serta integrasi antar sistem internal.",
+      "Mengembangkan workflow automation menggunakan BPMN untuk meningkatkan efisiensi proses bisnis.",
     ],
-    technologies: ["Next.js", "TypeScript", "PixiJS", "WebSockets", "PostgreSQL", "Playwright"],
+
+    technologies: [
+      "React",
+      "Next.js",
+      "FastAPI",
+      "PHP",
+      "PostgreSQL",
+      "MySQL",
+      "Firebase",
+      "Camunda BPMN",
+      "Docker",
+      "REST API",
+    ],
   },
+
   {
-    company: "Driftline",
-    role: "Frontend Engineer → Platform Lead",
-    period: "2021 — 2023",
-    location: "Berlin · Remote-first",
+    company: "PT Kharisma Project Travel",
+    role: "Full Stack Developer",
+    period: "Juni 2025 — Desember 2025",
+    location: "Remote",
+
     summary:
-      "Built the frontend platform for a logistics scale-up, from design tokens to release automation, while shipping customer-facing tracking experiences.",
+      "Mengembangkan Travel Management System secara end-to-end mulai dari analisis kebutuhan, perancangan UI/UX, implementasi frontend dan backend, hingga workflow automation untuk mendukung proses bisnis perusahaan.",
+
     highlights: [
-      "Shipped a 70-component design system adopted by five product teams.",
-      "Rebuilt the tracking map to stay under a 180KB JS budget and 60fps on mid-range Android.",
-      "Introduced preview environments and visual regression, reducing UI regressions by 70%.",
+      "Merancang antarmuka pengguna menggunakan Figma sebelum proses implementasi.",
+      "Mengembangkan frontend dan backend menggunakan Next.js.",
+      "Membangun REST API dan server-side logic untuk mendukung operasional aplikasi.",
+      "Mengintegrasikan PostgreSQL sebagai database utama.",
+      "Mengimplementasikan workflow automation menggunakan Camunda BPMN.",
+      "Berpartisipasi dalam optimalisasi performa dan integrasi antar layanan.",
     ],
-    technologies: ["React", "TypeScript", "MapLibre", "Node.js", "Storybook", "Docker"],
+
+    technologies: [
+      "Next.js",
+      "PostgreSQL",
+      "Camunda BPMN",
+      "REST API",
+      "Figma",
+      "Docker",
+    ],
   },
+
   {
-    company: "Harbor Labs",
-    role: "Full-stack Developer",
-    period: "2019 — 2021",
-    location: "Porto",
+    company: "Amartha × GDG Jakarta Hackathon 2025",
+    role: "Full Stack Developer (Hacker)",
+    period: "November 2025",
+    location: "Jakarta, Indonesia",
+
     summary:
-      "Second engineer on a fintech onboarding product. I worked across the stack, but lived in the browser — forms, state, and the little moments between steps.",
+      "Bersama tim mengembangkan SocialCollateral AI, sebuah platform berbasis Artificial Intelligence yang memanfaatkan Graph Analytics untuk membantu proses analisis social trust dalam sistem group lending.",
+
     highlights: [
-      "Took onboarding from whiteboard to 40k monthly users in eleven months.",
-      "Reduced drop-off at identity verification by 31% through progressive disclosure.",
-      "Built the internal admin console still used by the operations team today.",
+      "Mengembangkan frontend menggunakan React (Vite).",
+      "Membangun visualisasi graph interaktif menggunakan Sigma.js.",
+      "Mengembangkan backend menggunakan FastAPI.",
+      "Mengintegrasikan NLP dan Computer Vision sebagai bagian dari proses analisis.",
+      "Berkontribusi dalam perancangan arsitektur sistem end-to-end.",
+      "Berhasil masuk Top 15 Finalist Amartha × GDG Jakarta Hackathon.",
     ],
-    technologies: ["React", "Node.js", "PostgreSQL", "Redis", "Stripe", "AWS"],
-  },
-  {
-    company: "Independent",
-    role: "Freelance Developer & Designer",
-    period: "2017 — 2019",
-    location: "Porto · Remote",
-    summary:
-      "Small, deliberate projects for studios, museums, and one very patient bakery. Learned to scope, price, and say no.",
-    highlights: [
-      "Built interactive exhibits for two regional science museums.",
-      "Designed and shipped eleven marketing sites, all above 95 Lighthouse.",
-      "Created the first version of the ocean renderer later used in this portfolio.",
+
+    technologies: [
+      "React",
+      "Vite",
+      "FastAPI",
+      "Python",
+      "Sigma.js",
+      "Google Cloud",
+      "Gemini AI",
+      "Vertex AI",
+      "Graph Analytics",
     ],
-    technologies: ["JavaScript", "GSAP", "WebGL", "Figma", "Eleventy"],
   },
 ];

@@ -71,26 +71,27 @@ export function ChartPanel() {
         <div className="relative border-b border-ink/15 px-5 pb-4 pt-6 sm:px-7">
           <div className="flex items-start justify-between gap-3">
             <div>
-              <p className="font-hand text-xl leading-none text-ember">The chart</p>
+              <p className="font-hand text-xl leading-none text-ember">Peta Pulau</p>
               <h2
                 id="chart-title"
                 className="mt-0.5 font-display text-3xl leading-none text-ink"
               >
-                Choose an island
+                Pilih Pulau Tujuan
               </h2>
             </div>
             <button
               type="button"
               onClick={close}
-              aria-label="Close the chart"
+              aria-label="Tutup Peta"
               className="ghost-button flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/25 bg-parchment/60 text-ink hover:bg-parchment-aged"
             >
               <X aria-hidden="true" className="h-5 w-5" />
             </button>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-            Every island is a section of the portfolio. Open one directly, or close
-            this chart and sail there yourself.
+            Setiap pulau menyimpan bagian berbeda dari perjalanan saya. Pilih tujuan
+untuk langsung berlayar, atau tutup peta ini dan jelajahi dunia secara
+bebas menggunakan karakter Anda.
           </p>
           <CompassRose className="pointer-events-none absolute -right-3 bottom-1 h-24 w-24 text-brass/20" />
         </div>
@@ -127,7 +128,7 @@ export function ChartPanel() {
                         {hasVisited ? (
                           <span className="inline-flex items-center gap-0.5 text-[10px] uppercase tracking-[0.08em] text-moss">
                             <Check aria-hidden="true" className="h-3 w-3" />
-                            visited
+                            Dikunjungi
                           </span>
                         ) : null}
                       </span>
@@ -150,20 +151,23 @@ export function ChartPanel() {
           <div className="rounded-[3px] border border-ink/12 bg-parchment/30 p-3">
             <p className="flex items-center gap-2 font-display text-base text-ink">
               <Compass aria-hidden="true" className="h-4 w-4 text-brass" />
-              Sailing notes
+              Catatan Perjalanan
             </p>
             <p className="mt-1.5 text-xs leading-relaxed text-ink-muted">
-              <kbd className="rounded border border-ink/20 bg-parchment px-1 py-0.5 font-mono text-[10px]">WASD</kbd>{" "}
-              or arrow keys to sail. Touch screens get a joystick. Sail inside an
-              island&apos;s ring and the logbook opens on its own. Esc closes any open
-              parchment.
-            </p>
+  <kbd className="rounded border border-ink/20 bg-parchment px-1 py-0.5 font-mono text-[10px]">
+    WASD
+  </kbd>{" "}
+  atau tombol arah untuk menggerakkan karakter.
+  Pada perangkat sentuh tersedia joystick virtual.
+  Dekati lingkaran di sekitar pulau untuk membuka halaman secara otomatis.
+  Tekan <kbd className="rounded border border-ink/20 bg-parchment px-1 py-0.5 font-mono text-[10px]">Esc</kbd> untuk menutup halaman yang sedang terbuka.
+</p>
           </div>
         </div>
 
         <div className="border-t border-ink/15 px-5 py-4 sm:px-7">
           <p className="font-hand text-lg leading-none text-ink-muted">
-            {visited.length} of {islands.length} islands explored
+            {visited.length} dari {islands.length} pulau telah dijelajahi
           </p>
         </div>
       </div>

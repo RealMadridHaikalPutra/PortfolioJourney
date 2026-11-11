@@ -9,8 +9,10 @@ export function ExperiencePanel() {
   return (
     <div className="pb-8">
       <p className="max-w-2xl text-[15px] leading-relaxed text-ink sm:text-base">
-        Ten years of shipping, condensed to four ports. Each card is a role, the
-        problems worth remembering, and the stack that carried it.
+        Perjalanan profesional saya dalam mengembangkan berbagai sistem, mulai dari
+        pengalaman kerja, penelitian, hingga proyek pribadi. Setiap pengalaman
+        memberikan tantangan, pembelajaran, dan kesempatan untuk membangun solusi yang
+        berdampak.
       </p>
 
       <ol className="relative mt-7 space-y-5 border-l border-ink/20 pl-5 sm:pl-7">
@@ -68,11 +70,12 @@ export function ExperiencePanel() {
 
       <div className="mt-7 flex items-start gap-3">
         <PaperHeading icon={Sparkles} className="sr-only">
-          A note
+          Catatan
         </PaperHeading>
         <PaperNote>
-          The full, unedited career history lives in the résumé. These are the parts
-          I would tell you about over coffee.
+           Bagian ini merangkum pengalaman yang paling berpengaruh dalam perjalanan saya
+  sebagai Software Engineer. Informasi lebih lengkap dapat dilihat pada CV dan
+  profil GitHub saya.
         </PaperNote>
       </div>
     </div>

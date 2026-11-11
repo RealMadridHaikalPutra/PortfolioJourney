@@ -28,6 +28,10 @@ export function GameStage({ content }: { content: PortfolioContent }) {
   const [engineError, setEngineError] = useState(false);
 
   useEffect(() => {
+    void audioManager.enable();
+  }, []);
+
+  useEffect(() => {
     let cancelled = false;
     let engine: GameEngine | null = null;
 
