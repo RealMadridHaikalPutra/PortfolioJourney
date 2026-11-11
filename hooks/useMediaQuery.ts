@@ -1,0 +1,25 @@
+"use client";
+
+import { useSyncExternalStore } from "react";
+
+function subscribe(query: string, callback: () => void): () => void {
+  const media = window.matchMedia(query);
+  media.addEventListener("change", callback);
+  return () => media.removeEventListener("change", callback);
+}
+
+export function useMediaQuery(query: string): boolean {
+  return useSyncExternalStore(
+    (callback) => subscribe(query, callback),
+    () => window.matchMedia(query).matches,
+    () => false,
+  );
+}
+
+export function usePrefersReducedMotion(): boolean {
+  return useMediaQuery("(prefers-reduced-motion: reduce)");
+}
+
+export function useCoarsePointer(): boolean {
+  return useMediaQuery("(pointer: coarse)");
+}

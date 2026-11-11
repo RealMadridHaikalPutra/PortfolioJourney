@@ -1,0 +1,80 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 4785 >>
+stream
+BT /F1 27 Tf 0.20 0.14 0.09 rg 1 0 0 1 48 790 Tm (ALEX RIVERS) Tj ET
+BT /F2 12 Tf 0.45 0.31 0.16 rg 1 0 0 1 48 770 Tm (Creative Frontend Engineer  ·  Lisbon, Portugal) Tj ET
+BT /F2 9.5 Tf 0.30 0.24 0.16 rg 1 0 0 1 48 752 Tm (hello@alexrivers.dev  ·  alexrivers.dev  ·  github.com/alexrivers  ·  linkedin.com/in/alexrivers) Tj ET
+0.72 0.59 0.38 RG 0.7 w 48 738 m 547 738 l S
+BT /F1 9 Tf 0.45 0.31 0.16 rg 1 0 0 1 48 716 Tm (PROFILE) Tj ET
+BT /F2 9.5 Tf 0.22 0.17 0.11 rg 1 0 0 1 48 701 Tm (Product-minded frontend engineer with eight years building fast, accessible, high-craft interfaces. I) Tj ET
+BT /F2 9.5 Tf 0.22 0.17 0.11 rg 1 0 0 1 48 688.5 Tm (lead frontend architecture, care deeply about performance budgets and motion, and still write the) Tj ET
+BT /F2 9.5 Tf 0.22 0.17 0.11 rg 1 0 0 1 48 676 Tm (shaders and tests myself.) Tj ET
+BT /F1 9 Tf 0.45 0.31 0.16 rg 1 0 0 1 48 651.5 Tm (EXPERIENCE) Tj ET
+BT /F1 10.5 Tf 0.20 0.14 0.09 rg 1 0 0 1 48 635.5 Tm (Senior Frontend Engineer) Tj ET
+BT /F2 8.5 Tf 0.45 0.38 0.28 rg 1 0 0 1 390 635.5 Tm (2023  Present) Tj ET
+BT /F2 9 Tf 0.45 0.31 0.16 rg 1 0 0 1 48 623.5 Tm (Northwind Studio  Lisbon \(Hybrid\)) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 58 610.5 Tm (- Technical lead for a realtime market-intelligence product used by 30k analysts.) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 58 599 Tm (- Cut dashboard interaction latency from 340ms to 48ms with worker-owned derived state.) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 58 587.5 Tm (- Designed a streaming layer keeping 60 charts in sync; mentor three engineers.) Tj ET
+BT /F1 10.5 Tf 0.20 0.14 0.09 rg 1 0 0 1 48 569 Tm (Frontend Engineer to Platform Lead) Tj ET
+BT /F2 8.5 Tf 0.45 0.38 0.28 rg 1 0 0 1 390 569 Tm (2021  2023) Tj ET
+BT /F2 9 Tf 0.45 0.31 0.16 rg 1 0 0 1 48 557 Tm (Driftline  Berlin \(Remote\)) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 58 544 Tm (- Shipped a 70-component design system adopted by five product teams.) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 58 532.5 Tm (- Rebuilt the tracking map under a 180KB JS budget at 60fps on mid-range Android.) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 58 521 Tm (- Introduced preview environments and visual regression; UI regressions down 70%.) Tj ET
+BT /F1 10.5 Tf 0.20 0.14 0.09 rg 1 0 0 1 48 502.5 Tm (Full-stack Developer) Tj ET
+BT /F2 8.5 Tf 0.45 0.38 0.28 rg 1 0 0 1 390 502.5 Tm (2019  2021) Tj ET
+BT /F2 9 Tf 0.45 0.31 0.16 rg 1 0 0 1 48 490.5 Tm (Harbor Labs  Porto) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 58 477.5 Tm (- Second engineer on a fintech onboarding product, from whiteboard to 40k monthly users.) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 58 466 Tm (- Reduced identity-verification drop-off by 31% through progressive disclosure.) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 58 454.5 Tm (- Built the internal operations console still in daily use.) Tj ET
+BT /F1 10.5 Tf 0.20 0.14 0.09 rg 1 0 0 1 48 436 Tm (Freelance Developer & Designer) Tj ET
+BT /F2 8.5 Tf 0.45 0.38 0.28 rg 1 0 0 1 390 436 Tm (2017  2019) Tj ET
+BT /F2 9 Tf 0.45 0.31 0.16 rg 1 0 0 1 48 424 Tm (Independent  Porto / Remote) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 58 411 Tm (- Interactive exhibits for two regional science museums and eleven marketing sites.) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 58 399.5 Tm (- Every site shipped above 95 Lighthouse performance.) Tj ET
+BT /F1 9 Tf 0.45 0.31 0.16 rg 1 0 0 1 48 379 Tm (SKILLS) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 48 364 Tm (Frontend: TypeScript, React, Next.js, PixiJS/WebGL, CSS & motion, performance, accessibility) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 48 352 Tm (Backend: Node.js, Python/FastAPI, tRPC & GraphQL, WebSockets/SSE) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 48 340 Tm (Data: PostgreSQL, Prisma/Drizzle, Redis, Supabase) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 48 328 Tm (Cloud & DevOps: Vercel, AWS, Cloudflare, Docker, GitHub Actions, observability) Tj ET
+BT /F1 9 Tf 0.45 0.31 0.16 rg 1 0 0 1 48 310 Tm (EDUCATION) Tj ET
+BT /F2 9.5 Tf 0.22 0.17 0.11 rg 1 0 0 1 48 295 Tm (BSc Computer Science, University of Porto  2013 to 2017  ·  HCI focus) Tj ET
+BT /F2 9.5 Tf 0.22 0.17 0.11 rg 1 0 0 1 48 283 Tm (Interaction Design Certificate, Interaction Design Foundation  2018) Tj ET
+BT /F1 9 Tf 0.45 0.31 0.16 rg 1 0 0 1 48 265 Tm (SELECTED WORK) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 48 250 Tm (AI Stock Synchronization  ·  Photobooth  ·  Finance Tracker  ·  AI Music Analyzer  ·  Travel System) Tj ET
+BT /F2 9 Tf 0.22 0.17 0.11 rg 1 0 0 1 48 238 Tm (Detailed case studies and live links: alexrivers.dev) Tj ET
+0.72 0.59 0.38 RG 0.7 w 48 58 m 547 58 l S
+BT /F2 8 Tf 0.50 0.44 0.34 rg 1 0 0 1 48 44 Tm (Sail the portfolio at alexrivers.dev  generated from the Island Journey project.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000005088 00000 n 
+0000005190 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+5287
+%%EOF

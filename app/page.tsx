@@ -1,69 +1,109 @@
-import Image from "next/image";
+import { Suspense } from "react";
+import { Anchor } from "lucide-react";
+import { connection } from "next/server";
+import { GameStage } from "@/components/game/GameStage";
+import { getPortfolioContent } from "@/lib/content/server";
+import { structuredData } from "@/lib/seo";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main id="main-content" className="relative h-dvh w-full overflow-hidden">
+      <Suspense fallback={<PortfolioLoading />}>
+        <PortfolioExperience />
+      </Suspense>
+    </main>
+  );
+}
+
+/**
+ * `connection()` keeps the content out of the static shell so edits made in
+ * Supabase are picked up by the next request instead of the next build.
+ */
+async function PortfolioExperience() {
+  await connection();
+  const content = await getPortfolioContent();
+  const { profile, skillGroups, projects } = content;
+  const jsonLd = JSON.stringify(structuredData(content)).replace(/</g, "\\u003c");
+
+  return (
+    <>
+      <h1 className="sr-only">
+        {profile.name} — {profile.role} · Island Journey interactive portfolio
+      </h1>
+      <GameStage content={content} />
+
+      <noscript>
+        <div className="paper absolute inset-0 z-[100] overflow-y-auto p-6 text-ink">
+          <div className="mx-auto max-w-2xl">
+            <p className="font-hand text-2xl text-ember">A note from the harbourmaster</p>
+            <h2 className="mt-1 font-display text-4xl">
+              This portfolio is a little sailing game.
+            </h2>
+            <p className="mt-3 text-lg">
+              JavaScript is switched off, so the boat is still tied to the dock. Here is the
+              logbook in plain text instead.
+            </p>
+            <p className="mt-3 text-lg">
+              {profile.intro} Based in {profile.location}. Reach me at{" "}
+              <a className="underline decoration-brass underline-offset-4" href={`mailto:${profile.email}`}>
+                {profile.email}
+              </a>
+              .
+            </p>
+
+            <h3 className="mt-8 font-display text-2xl">Sections</h3>
+            <ul className="mt-2 list-disc space-y-1 pl-6">
+              <li>Home — lighthouse: introduction and résumé.</li>
+              <li>About — cottage: story, education, achievements, timeline.</li>
+              <li>Skills — library: {skillGroups.map((group) => group.label).join(", ")}.</li>
+              <li>Experience — castle: roles and the stack behind them.</li>
+              <li>Portfolio — treasure cave: {projects.map((project) => project.title).join(", ")}.</li>
+              <li>Contact — harbour: email, socials, and CV.</li>
+            </ul>
+
+            <h3 className="mt-8 font-display text-2xl">Elsewhere</h3>
+            <ul className="mt-2 space-y-1">
+              {profile.socials.map((social) => (
+                <li key={social.href}>
+                  <a className="underline decoration-brass underline-offset-4" href={social.href}>
+                    {social.label}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a className="underline decoration-brass underline-offset-4" href="/resume.pdf">
+                  Download résumé (PDF)
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </noscript>
+
+      <script
+        type="application/ld+json"
+        // JSON-LD is generated from loaded content only; `<` is escaped above.
+        dangerouslySetInnerHTML={{ __html: jsonLd }}
+      />
+    </>
+  );
+}
+
+function PortfolioLoading() {
+  return (
+    <div className="sea-backdrop relative flex h-dvh w-full items-center justify-center overflow-hidden">
+      <div aria-hidden="true" className="grain-overlay pointer-events-none absolute inset-0 opacity-[0.16]" />
+      <div className="relative mx-5 max-w-sm rounded-[3px] border border-[#c9a86a]/35 bg-[#0b3037]/80 px-6 py-5 text-center shadow-[0_24px_50px_-30px_rgba(0,0,0,0.9)]">
+        <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-[#c9a86a]/40">
+          <Anchor className="h-4 w-4 animate-pulse text-[#e7d0a0] motion-reduce:animate-none" strokeWidth={1.6} />
+        </span>
+        <p className="mt-3 font-display text-sm uppercase tracking-[0.18em] text-[#f3e3bc]">
+          Island Journey
+        </p>
+        <p className="mt-1 font-hand text-lg leading-snug text-foam/70">
+          Charting the waters…
+        </p>
+      </div>
     </div>
   );
 }
